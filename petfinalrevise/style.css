@@ -1,0 +1,1117 @@
+/* TAP TO CONTINUE OVERLAY SECTION */
+#tapOverlay {
+  position: fixed;
+  inset: 0;
+  background: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  text-align: center;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.pulse-text {
+  font-size: 20px;
+  animation: pulse 1.5s infinite;
+}
+
+.overlay-subtext {
+  font-size: 14px;
+  margin-top: 30px;
+  opacity: 0.7;
+  max-width: 80%;
+  font-style: italic;
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+
+.fade-out {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* HEADER TANGI.CO SECTION*/
+.tangi-header {
+  width: 100vw;
+  background: #fff;
+  padding: 10px 0;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  border-bottom: 1px solid #555;
+  margin-bottom: -20px;
+}
+
+.tangi-wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.tangi-title {
+  font-family: "Playfair Display", serif;
+  font-size: 28px;
+  /* Smaller font */
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+  letter-spacing: 1px;
+}
+
+.baybayin {
+  font-size: 18px;
+  color: #121111;
+  margin-top: 4px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.tangi-quote {
+  font-size: 14px;
+  color: #777;
+  margin-top: 6px;
+  margin-bottom: -20px;
+  font-style: italic;
+  font-family: "Crimson Text", serif;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .tangi-title {
+    font-size: 22px;
+  }
+
+  .baybayin {
+    font-size: 16px;
+  }
+
+  .tangi-quote {
+    font-size: 13px;
+  }
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* ENVELOPE SECTION */
+#valentine-envelope {
+  position: relative;
+ /* min-height: 60vh;
+  overflow: hidden;
+  background-color: white;
+  */
+  padding: 40px 0 20px; /* controls spacing to next section */
+}
+/* Main site fade-in */
+#mainSite {
+  opacity: 0;
+  transition: opacity 1s ease;
+  margin-top: -20px;
+}
+
+/* Name heading */
+.Name {
+  color: rgb(10, 10, 10);
+  text-align: cente;
+}
+
+/* Header styles */
+.tangi-header {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.tangi-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tangi-title {
+  font-size: 25px;
+  margin: 0;
+}
+
+.baybayin {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.tangi-quote {
+  font-style: italic;
+  margin-top: 10px;
+  opacity: 0.8;
+}
+
+.Tap {
+  font-size: 10px;
+  color: #555;
+  font-style: italic;
+  margin-top: 8px;
+  margin-bottom: 60px;
+  text-align: center;
+}
+
+.quote {
+  font-size: 18px;
+  color: #555;
+  font-style: italic;
+  margin-top: -70px;
+  margin-bottom: 5px;
+}
+
+.envelope-wrapper {
+  position: relative;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0 10px; /* space above + below */
+  height: auto;
+ /* margin-top: -5px;
+ height: 380px;
+ */
+}
+
+#envelope {
+  position: relative;
+  width: 280px;
+  height: 180px;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: #e5e9ea;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.front {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 3;
+}
+
+.flap {
+  border-left: 140px solid transparent;
+  border-right: 140px solid transparent;
+  border-bottom: 82px solid transparent;
+  border-top: 98px solid #e2e9ec;
+  transform-origin: top;
+}
+
+.pocket {
+  border-left: 140px solid #c3cdd3;
+  border-right: 140px solid #c3cdd3;
+  border-bottom: 90px solid #c3cdd3;
+  border-top: 90px solid transparent;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.letter {
+  position: relative;
+  background-color: #fff;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 90%;
+  top: 5%;
+  border-radius: 6px;
+  box-shadow: 0 2px 26px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+}
+
+.letter:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 25%,
+    rgba(215, 227, 239, 0.7) 55%,
+    rgba(215, 227, 239, 1) 100%
+  );
+  pointer-events: none;
+}
+
+.words {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #222;
+}
+
+.words.line1 {
+  top: 10%;
+  font-size: 18px;
+  font-family: "Libre Baskerville", serif;
+  font-weight: bold;
+  margin-left: -55px;
+}
+
+.words.line2 {
+  top: 30%;
+  font-size: 12px;
+  padding: 0 10px;
+  color: #444;
+  font-style: italic;
+  font-weight: normal;
+  right: 25px;
+}
+
+.words.line3 {
+  top: 45%;
+  font-size: 12px;
+  padding: 0 10px;
+  color: #444;
+  font-style: italic;
+  font-weight: normal;
+}
+
+.open .flap {
+  transform: rotatex(180deg);
+  transition: transform 0.4s ease, z-index 0.6s;
+  z-index: 1;
+}
+
+.close .flap {
+  transform: rotatex(0deg);
+  transition: transform 0.4s 0.6s ease, z-index 1s;
+  z-index: 5;
+}
+
+.close .letter {
+  transform: translateY(0px);
+  transition: transform 0.4s ease, z-index 1s;
+  z-index: 1;
+}
+
+.open .letter {
+  transform: translateY(-60px);
+  transition: transform 0.4s 0.6s ease, z-index 0.6s;
+  z-index: 2;
+}
+
+#close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 16px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  /* Optional dim effect */
+  z-index: 5;
+}
+
+/* Quote Section with responsive top margin */
+.quote-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: clamp(20px, 5vw, 50px); /* vertical padding scales */
+  margin-top: clamp(30px, 5vw, 50px); /* responsive space from previous section */
+  background-color: none; /* optional background */
+}
+
+/* Responsive quote styling */
+.responsive-quote {
+  text-align: center;
+  font-size: clamp(16px, 2vw, 22px);
+  line-height: 1.6;
+  color: #333;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 5%;
+  
+}
+
+
+#envelope.open + #close-btn {
+  display: flex;
+}
+
+@media (max-width: 400px) {
+  #envelope {
+    transform: scale(0.85);
+  }
+
+  .words.line1 {
+    font-size: 16px;
+  }
+
+  .words.line2 {
+    font-size: 14px;
+  }
+}
+
+.quote {
+  font-size: 18px;
+  color: #555;
+  font-style: italic;
+  margin-top: -90px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding: 0 10px;
+}
+
+/* Responsive font sizing for smaller screens */
+@media (max-width: 480px) {
+  .quote {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .quote {
+    font-size: 14px;
+  }
+}
+
+ /* ------- */
+@media (max-width: 480px) {
+  #envelope {
+    transform: scale(0.9);
+  }
+
+  .label-baybayin {
+    font-size: 16px;
+    margin-top: 30px;
+  }
+
+  .Tap {
+    font-size: 10px;
+    margin-top: 6px;
+  }
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* FOR SINGLE PHOTO SECTION*/
+.custom-section {
+  background-color: #e2e9ec;
+  padding: 60px 20px 20px 20px;
+  margin-top: 30px;
+}
+
+.single-photo-section1 {
+  background-color: transparent;
+  padding: 60px 20px;
+  text-align: center;
+  font-family: "Georgia", serif;
+  border-radius: 40px;
+  margin-top: -60px;
+}
+
+.photo-wrapper img {
+  width: 250px;
+  /* Adjust the box size */
+  height: 250px;
+  overflow: hidden;
+  /* Ensures no scrollbars if image overflows */
+  border-radius: 10px;
+  margin: 0 auto;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+.square-img {
+  width: 150%;
+  height: 100%;
+  object-fit: cover;
+  /* ✅ Fills the entire box, cropping edges if needed */
+  display: block;
+  border-radius: 10px;
+  object-position: show bottom;
+  /* to show the bottom picture with your desire scope*/
+  /* to show on top to resize it kindly use center top naman*/
+}
+
+/*-------------- This is for full photos not being crop on top and bottom  ----*/
+.photo-wrapper img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+}
+
+/*--------------if the image photos is being cut and the poeple are not seen use this-------*/
+.photo-caption {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #555;
+  font-style: italic;
+}
+
+.photo-caption1 {
+  margin-top: 20px;
+  font-size: 10px;
+  color: #555;
+  font-style: italic;
+}
+
+/* ✅ Mobile responsiveness for iPhones and small Android devices */
+@media (max-width: 414px) {
+  .photo-caption {
+    font-size: 16px;
+  }
+
+  .photo-caption1 {
+    font-size: 9.5px;
+  }
+
+  .photo-wrapper img {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 360px) {
+  .photo-caption {
+    font-size: 15px;
+  }
+
+  .photo-caption1 {
+    font-size: 9px;
+  }
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* FOR MESSAGE SECTION*/
+/* 🌸 Background wrapper for message + bible footer */
+.message-bg-section {
+  background-color: #e2e9ec;
+  padding: 60px 20px;
+}
+
+/* Signature */
+.signature {
+  text-align: right;
+  font-style: italic;
+  margin-top: -20px;
+  margin-bottom: -80px;
+  font-weight: 500;
+  color: #444;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+/* Message style */
+.editable-message {
+  font-family: "PT Serif", serif;
+  font-style: italic;
+  color: #333;
+  line-height: 1.8;
+  margin-top: -145px;
+}
+
+/* Bible Verse Footer */
+.bible-footer {
+  padding: 30px 20px;
+  font-family: "Georgia", serif;
+  margin-top: 60px;
+}
+
+.bible-footer .verse-text {
+  font-size: 10px;
+  font-style: italic;
+  margin-top: 0px;
+  color: #333;
+}
+
+.bible-footer .verse-ref {
+  font-size: 14px;
+  color: #555;
+}
+
+.baybayin-text {
+  margin-top: 30px;
+  font-size: 14px;
+  font-family: "Noto Sans Tagalog", sans-serif;
+  color: #555;
+  opacity: 0.9;
+  margin-bottom: -80px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* CAROUSEL SECTION*/
+.carousel-quote {
+  margin-bottom: 20px;
+  padding: 60px 20px;
+}
+
+.quote-text {
+  font-size: 18px;
+  font-style: italic;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  margin: -22px auto 15px auto;
+  /* TOP RIGHT BOTTOM LEFT */
+}
+
+/* Carousel & Modal Styles */
+.carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  padding: 30px 0;
+  margin-top: -90px;
+}
+
+.carousel-track {
+  display: flex;
+  animation: scroll linear infinite;
+  will-change: transform;
+}
+
+.carousel-item-custom {
+  flex: 0 0 220px;
+  margin: 1px;
+  cursor: pointer;
+}
+
+.carousel-item-custom img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item-custom:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 768px) {
+  .carousel-item-custom {
+    flex: 0 0 160px;
+  }
+
+  .carousel-item-custom img {
+    height: 120px;
+  }
+}
+
+/* Zoom Modal */
+.zoom-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.zoom-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.zoom-close {
+  position: absolute;
+  top: 10px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.zoom-close:hover {
+  color: #f1f1f1;
+}
+
+.tap-to-zoom1 {
+  font-size: 10px;
+  color: #777;
+  text-align: center;
+  margin-top: 8px;
+  font-family: "Georgia", serif;
+  opacity: 0.9;
+  letter-spacing: 0.5px;
+}
+.bible-footer1 {
+  padding: 20px 20px;
+  font-family: "Georgia", serif;
+  margin-top: -50px;
+}
+
+.bible-footer1 .verse-text {
+  font-size: 10px;
+  font-style: italic;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.bible-footer1 .verse-ref {
+  font-size: 14px;
+  color: #555;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* FULL VIDEO WIDTH SECTION*/
+.zoom-prompt {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 10px;
+  color: #777;
+  font-family: "Georgia", serif;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.zoom-prompt:hover {
+  color: #444;
+  transform: scale(1.05);
+}
+
+.baybayin-logo1 {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Noto Sans Tagalog", sans-serif;
+  font-size: 15;
+  color: #555;
+}
+
+.baybayin-logo {
+  margin-top: 30px;
+  font-size: 14px;
+  font-family: "Noto Sans Tagalog", sans-serif;
+  color: #555;
+  opacity: 0.9;
+  margin-bottom: -80px;
+}
+
+.full-video-section {
+  background-color: #e2e9ec;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+
+.video-heading {
+  font-family: "Great Vibes", cursive;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #5c5c5c;
+}
+
+.video-wrapper1 {
+  width: 100vw;
+  overflow: visible;
+  margin: 0 auto;
+}
+
+.full-width-video {
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  max-height: 450px;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  filter: grayscale();
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.full-width-video:hover {
+  transform: scale(1.02);
+}
+
+.video-message {
+  font-size: 16px;
+  color: #444;
+  margin-top: -6px;
+  padding: 0 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-style: italic;
+}
+
+.video-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.4s ease;
+  flex-direction: column;
+}
+
+.zoomed-video {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+  animation: zoomIn 0.4s ease-in-out;
+}
+
+.close-video {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: white;
+  cursor: pointer;
+  z-index: 10001;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-heading {
+    font-size: 20px;
+  }
+
+  .full-width-video {
+    max-height: 220px;
+    width: 100vw;
+  }
+
+  .video-message {
+    font-size: 14px;
+  }
+
+  .zoomed-video {
+    max-width: 100%;
+    max-height: 60%;
+  }
+}
+.custom-white-section {
+  background-color: none;
+  padding: 60px 20px;
+  margin-top: -30px;
+  text-align: center;
+  width: 100%;
+}
+
+.custom-white-section .content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.custom-white-section .main-paragraph {
+  font-size: 16px;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.custom-white-section .notes {
+  font-size: 16px;
+  color: #666;
+  font-style: italic;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* SINGLE PHOTO PAINTING WITH LABEL SECTION*/
+.single-photo-section {
+  background-color: transparent;
+  padding: 60px 20px 15px;
+  text-align: center;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  border-radius: 40px;
+  margin-top: -100px;
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*VIDEO SECTION */
+.image-wrapperrainbow {
+  width: 100%; /* container adapts to screen size */
+  max-width: 600px; /* optional: set a max width if you want */
+  margin: 0 auto; /* center the container */
+}
+
+.image-wrapperrainbow img {
+  width: 100%; /* scales with the container width */
+  height: auto; /* keeps the image ratio */
+  display: block;
+}
+.baybayin-logo2 {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Noto Sans Tagalog", sans-serif;
+  font-size: 15px;
+  color: #555;
+}
+
+.last-photo {
+  background-color: #e2e9ec;
+  padding: 20px 0;
+  margin: 0;
+  text-align: center;
+  font-family: "Georgia", serif;
+}
+
+.lastphoto-heading12 {
+  font-size: 15px;
+  font-style: italic;
+  color: #5c5c5c;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.video-wrapper {
+  display: inline-block;
+  max-width: 100%;
+  background: black;
+  border-radius: 10px;
+}
+
+.video-wrapper video {
+  width: 100vw;
+  max-width: 720px;
+  /* You can adjust this */
+  height: auto;
+  /* Maintain aspect ratio */
+  max-height: 360px;
+  /* ✅ Limit height without cropping left/right */
+  object-fit: cover;
+  /* 👈 Ensures no cropping, keeps full content */
+  background: black;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.lastphoto-caption {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #444;
+  font-style: italic;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .video-wrapper video {
+    max-width: 100%;
+  }
+
+  .video-heading {
+    font-size: 18px;
+  }
+
+  .video-caption {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/* MEMORY MESSAGE LAST PAGE SECTION*/
+.baybayin-logo3 {
+  text-align: center;
+  margin-top: 20px;
+  font-family: "Noto Sans Tagalog", sans-serif;
+  font-size: 15px;
+  color: #555;
+}
+
+.memory-message-section {
+  background: #fcfcfc;
+  /* Soft beige tone */
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.memory-message-box {
+  background: none;
+  border-radius: 16px;
+  padding: 40px 30px;
+  max-width: 700px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.memory-message {
+  font-size: 18px;
+  font-style: italic;
+  color: #444;
+  font-family: "Georgia", serif;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .memory-message-box {
+    padding: 30px 20px;
+  }
+
+  .memory-message {
+    font-size: 16px;
+  }
+}
+
+/*--------------------------------------------------------------------------------------*/
+
+/*FOOTER SECTION */
+.site-footer {
+  background-color: #e2e9ec;
+  color: black;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Arial", sans-serif;
+}
+
+.footer-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.brand-name {
+  font-weight: bold;
+  color: #101012;
+  /* Gold color - change if needed */
+  font-style: italic;
+}
+
+/* ✅ iPhone 13–SE, Android phones */
+@media (max-width: 414px) {
+  .video-caption,
+  .photo-caption,
+  .memory-message {
+    font-size: 14px;
+  }
+
+  .video-heading {
+    font-size: 18px;
+  }
+
+  .video-wrapper video,
+  .full-width-video {
+    max-height: 240px;
+  }
+
+  .memory-message-box {
+    padding: 20px 15px;
+  }
+}
+
+/* ✅ Extra small phones: iPhone SE, small Androids */
+@media (max-width: 360px) {
+  .video-caption,
+  .photo-caption,
+  .memory-message {
+    font-size: 13px;
+  }
+
+  .video-heading {
+    font-size: 16px;
+  }
+
+  .video-wrapper video {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    font-size: 14px;
+  }
+}

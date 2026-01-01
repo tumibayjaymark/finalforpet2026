@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Practice bootstrap</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-------------------------- Google Fonts ---------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div id="tapOverlay" onclick="startSite()">
+    <p class="pulse-text">Tap to Continue</p>
+    <p class="overlay-subtext">
+        A memory is a photograph taken by the heart, stored in silence, and framed by time.”
+        <br><br>— Tangí.co<br><br>ᜆᜅᜒ
+    </p>
+</div>
+
+
+<!--------------------------------- Background Music --------------------------------------->
+
+<audio id="bgMusic" src="assets/Declan McKenna  Slipping Through My Fingers Official Audio.mp3" preload="auto" loop></audio>
+
+<!----------------------------------  MAIN WEBSITE ----------------------------------------->
+
+<div id="mainSite">
+    <h1 class="Name"></h1>
+    <header class="tangi-header">
+        <div class="tangi-wrapper">
+            <h1 class="tangi-title"><i>Tangí.co</i></h1>
+            <div class="baybayin">ᜆᜅᜒ</div>
+            <p class="tangi-quote">“Every heartbeat holds a memory worth keeping.”</p>
+        </div>
+    </header>
+</div>
+    <!----------------------------- Envelope Section -------------------------------->
+    <section class="quote-section">
+      <p class="responsive-quote">
+          “Someone with paws showed me what unconditional love truly means. Every wag, every cuddle, reminds me that love has no conditions.”
+      </p>
+     </section>
+            <section id="valentine-envelope">
+                <div id="overlay"></div>
+                <div class="envelope-wrapper">
+                    <div id="envelope" class="close">
+                        <div class="front flap"></div>
+                        <div class="front pocket"></div>
+                        <div class="letter">
+                            <div class="words line1">TINATANGÍ</div>
+                            <div class="words line2">(adj.) To cherish.</div>
+                            <div class="words line3">(n.) Special someone.</div>
+                        </div>
+                    </div>
+                    <button id="close-btn">✕</button>
+                </div>
+    <p class="Tap">Tap to Reveal</p>
+    </section> 
+
+     <!--------------------- Main Single Photo with Label Section ------------------------------>
+
+    <div class="custom-section">
+        <section class="single-photo-section1">
+            <div class="photo-wrapper">
+                <img src="assets/1.jpg" alt="A Special Moment" class="square-img">
+                <p class="photo-caption">“Alex”</p>
+                <p class="photo-caption1">
+                    “Some angels don’t have wings, sometimes they have fur, scales, or feathers.”<br><br>— Maya Angelou
+                </p>
+            </div>
+        </section>
+
+    </div>
+
+    <!---------------------- Message and Bible Verse Section with Background --------------->
+    <div class="message-bg-section">
+        <div class="container">
+            <div class="message-note p-4 mx-auto">
+                <h2 class="text-center mb-3"></h2>
+
+                <!---------------------- Message Section --------------------->
+                <p class="editable-message">
+                    My Dearest Alex,
+                    <br><br>
+                    It’s hard to believe you’re no longer here with me. You weren’t just a dog you were my companion, my comfort, and my joy. Every wag of your tail, every excited bark, and every quiet moment by my side reminded me of how lucky I was to have you. You loved me in ways words could never describe a pure, loyal, and unconditional.
+                    <br><br>
+                    I miss the way you greeted me as if I were the most important person in the world. I miss the softness of your fur and the comfort of your presence when life felt heavy. You were more than a pet you were family, and losing you has left an emptiness only love can create.<br><br>
+
+                    Though you’re gone, Alex, you’ll always live in my heart. Thank you for giving me a love so true and memories I’ll carry forever.
+                    <br><br>
+
+                 <div class="signature">– Your Human</div>
+             
+                 <div class="signature"></div>
+                </p>
+            </div>
+            <footer class="bible-footer">
+                <div class="container text-center">
+                    <p class="verse-text">“Every pet reminds us that unconditional love is simple, pure, and eternal.”</p>
+                    <span class="verse-ref">— Roger Caras</span>
+                    <div class="baybayin-text">ᜆᜅᜒ</div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    </section>
+    <div class="carousel-quote text-center">
+        <p class="quote-text">
+            "Each photo holds a piece of our story. Every smile, every glance, frozen in time. Together, they create a
+            carousel of memories I’ll never stop cherishing."
+        </p>
+    </div>
+    </section>
+
+    <!---------------- CAROUSEL SECTION ------------------>
+    <div class="carousel-wrapper">
+        <div class="carousel-track">
+            <!---------------- Original set ------------------>
+            <div class="carousel-item-custom"><img src="assets/1.jpg" alt="1"></div>
+            <div class="carousel-item-custom"><img src="assets/2.jpg" alt="2"></div>
+            <div class="carousel-item-custom"><img src="assets/3.jpg" alt="3"></div>
+            <div class="carousel-item-custom"><img src="assets/4.jpg" alt="4"></div>
+            <div class="carousel-item-custom"><img src="assets/5.jpg" alt="5"></div>
+            <div class="carousel-item-custom"><img src="assets/6.jpg" alt="6"></div>
+            <div class="carousel-item-custom"><img src="assets/1.jpg" alt="7"></div>
+            <div class="carousel-item-custom"><img src="assets/2.jpg" alt="8"></div>
+            <div class="carousel-item-custom"><img src="assets/3.jpg" alt="9"></div>
+            <div class="carousel-item-custom"><img src="assets/4.jpg" alt="10"></div>
+
+            <!------------- Duplicate for seamless loop --------------->
+            <div class="carousel-item-custom"><img src="assets/1.jpg" alt="1"></div>
+            <div class="carousel-item-custom"><img src="assets/2.jpg" alt="2"></div>
+            <div class="carousel-item-custom"><img src="assets/3.jpg" alt="3"></div>
+            <div class="carousel-item-custom"><img src="assets/4.jpg" alt="4"></div>
+            <div class="carousel-item-custom"><img src="assets/5.jpg" alt="5"></div>
+            <div class="carousel-item-custom"><img src="assets/6.jpg" alt="6"></div>
+            <div class="carousel-item-custom"><img src="assets/1.jpg" alt="7"></div>
+            <div class="carousel-item-custom"><img src="assets/2.jpg" alt="8"></div>
+            <div class="carousel-item-custom"><img src="assets/3.jpg" alt="9"></div>
+            <div class="carousel-item-custom"><img src="assets/4.jpg" alt="10"></div>
+        </div>
+        <p class="tap-to-zoom1">Tap to Zoom</p>
+    </div>
+
+    <!------------------------ Zoom Modal ------------------------------>
+    <div id="zoomModal" class="zoom-modal">
+        <span id="closeZoom" class="zoom-close">&times;</span>
+        <img id="zoomedImg" class="zoom-content" src="" alt="Zoomed Photo">
+    </div>
+
+    <footer class="bible-footer1">
+        <div class="container text-center">
+            <p class="verse-text">“Pets teach us the purest form of love without judgment, without condition, without end.”</p>
+            <span class="verse-ref"></span>
+            <div class="baybayin-logo3">ᜆᜅᜒ</div>
+        </div>
+        <section class="next-section">
+        </section>
+
+    </footer>
+
+    <!----------------------- Full-Width Responsive Video Section -------------------------->
+    <section class="full-video-section">
+        <p class="video-message">
+            "This video is more than motion — it’s a story of us, told without words."
+        </p>
+        <!----------------------- Full-Width Wrapper for Video ---------------------->
+        <div class="video-wrapper1">
+            <video class="full-width-video" id="videoThumbnail" autoplay muted loop playsinline>
+                <source src="assets/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p class="zoom-prompt">Tap to Zoom</p>
+        <div class="baybayin-logo1">ᜆᜅᜒ</div>
+    </section>
+    <!-------------------------- Modal Zoom for Video ------------------------------>
+    <div class="video-modal" id="videoModal">
+        <span class="close-video" id="closeVideo">&times;</span>
+        <video class="zoomed-video" controls muted autoplay playsinline>
+            <source src="assets/video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <section class="custom-white-section">
+        <div class="content">
+            <p class="main-paragraph">“Pets never wait for presents; they only wait for you. Their love is unconditional, their joy is in your presence, and every moment spent together is a gift beyond measure.”</p>
+        </div>
+    </section>
+
+    <!------------------------ Single Photo painting with Label Section ------------------->
+    <section class="single-photo-section">
+        <div class="photo-wrapper">
+            <picture>
+                <source srcset="" type="image/webp">
+                <img src="assets/mansbestfriend.jpg" alt="A Special Moment">
+            </picture>
+
+            <p class="photo-caption">“When a pet loves you, it’s forever. That bond never fades, only grows in memory.””</p>
+            <p class="photo-caption1">“Charles Darwin”</p>
+            <div class="baybayin-logo3">ᜆᜅᜒ</div>
+        </div>
+    </section>
+
+    <!------------------------------- Video Section ------------------------------->
+    
+    <section class="last-photo">
+        <p class="lastphoto-heading12">“Until We Meet Again at the Rainbow Bridge.”</p>
+        <div class="video-wrapper">
+            <div class="image-wrapperrainbow">
+            <img src="assets/rainbow art.jpg" alt="Rainbow Art" />
+            </div>
+        </div>
+        </div>
+        <p class="lastphoto-caption">
+           “The Rainbow Bridge is where our companions run free. It is a land of endless sunshine, filled with peace and warmth. Until we are reunited, their love remains in our hearts.”
+        </p>
+        <div class="baybayin-logo2">ᜆᜅᜒ</div>
+
+    </section>
+
+    <!-------------------------- Memory Message Section ------------------------------>
+    <section class="memory-message-section">
+        <div class="memory-message-box">
+            <p class="memory-message">
+                “This isn't just necklace. It's emotion. It's love. It's a reminder that even in silence, I'm always
+                with you.
+                <br><br>
+                Thank you for holding onto this. This memory lives in your hands now — close to your heart, where it
+                belongs.”
+            </p>
+            <div class="baybayin-logo3">ᜆᜅᜒ</div>
+        </div>
+    </section>
+
+    <!-------------------------- Footer Section --------------------------------->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>&copy; 2025 <span class="brand-name">Tangí.co</span>. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
